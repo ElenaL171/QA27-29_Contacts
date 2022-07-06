@@ -10,22 +10,16 @@ public class CreateAccountTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
         if (!isLoginLinkPresent()) {
-            click(By.xpath("//button[contains(.,'Sign Out')]"));
+            clickOnSignOutButton();
         }
     }
 
     @Test
     public void registrationPositiveTest() {
         //click on the link LOGIN
-        click(By.xpath("//a[contains(.,'LOGIN')]"));
-        //   Assert.assertTrue(isElementPresent(By.cssSelector(".login_login__3EHKB")));
-        //fill registration form
-        type(By.cssSelector("[placeholder='Email']"), "jesse1+983@mail.ru");
-        type(By.cssSelector("[placeholder='Password']"), "Jesse_12345");
-        //click on the button Registration
-        click(By.xpath("//button[contains(.,'Registration')]"));
+        registration();
         //assert the button Sign out displayed
-        Assert.assertTrue(isElementPresent(By.xpath("//button[contains(.,'Sign Out')]")));
+        Assert.assertTrue(isSignOutButtonPresent());
     }
 
 }

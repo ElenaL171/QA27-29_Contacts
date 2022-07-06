@@ -10,7 +10,7 @@ public class LoginTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
         if (!isLoginLinkPresent()) {
-            click(By.xpath("//button[contains(.,'Sign Out')]"));
+            clickOnSignOutButton();
         }
     }
 
@@ -19,7 +19,7 @@ public class LoginTests extends TestBase {
         //click on Login link
         login();
         // accert the button SignOut
-        Assert.assertTrue(isElementPresent(By.xpath("//button[contains(.,'Sign Out')]")));
+        Assert.assertTrue(isSignOutButtonPresent());
     }
 
 }
