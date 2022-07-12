@@ -1,6 +1,5 @@
-package com.telran.contacts;
+package com.telran.contacts.tests;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 
@@ -12,7 +11,7 @@ public class HomePageTests extends TestBase{
         //verifly to displayed Home Component form
         // System.out.println("Component Form: "+ isComponentFormPresent());
         //isElementPresent(By.cssSelector("div:nth-child(2)>div>div"));
-        isComponentFormPresent();
+        app.getContact().isComponentFormPresent();
 
     }
 

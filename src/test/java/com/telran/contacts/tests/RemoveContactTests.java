@@ -1,6 +1,5 @@
-package com.telran.contacts;
+package com.telran.contacts.tests;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -8,22 +7,22 @@ import org.testng.annotations.Test;
 public class RemoveContactTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
-        if (!isLoginLinkPresent()) {
-            clickOnSignOutButton();
+        if (!app.isLoginLinkPresent()) {
+            app.clickOnSignOutButton();
         } else {
-            login();
-            addContakt();
+            app.getUser().login();
+            app.getContact().addContakt();
         }
     }
 
     @Test
     public void removeContactTest() {
-        pause();
-        int sizeBefore = sizeOfContacts();
+        app.getContact().pause(1000);
+        int sizeBefore = app.getContact().sizeOfContacts();
         System.out.println(sizeBefore);
-        removeContact();
-        pause();
-        int sizeAfter = sizeOfContacts();
+        app.getContact().removeContact();
+        app.getContact().pause(1000);
+        int sizeAfter = app.getContact().sizeOfContacts();
         System.out.println(sizeAfter);
         Assert.assertEquals(sizeAfter,sizeBefore-1);
     }
