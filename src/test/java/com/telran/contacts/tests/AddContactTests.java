@@ -36,22 +36,6 @@ public class AddContactTests extends TestBase {
         list.add(new Object[]{"Oliver1", "Kan", "2222222", "kan+1@gm.com", "Berlin", "goalkiper"});
         list.add(new Object[]{"Oliver2", "Kan", "3333333", "kan+2@gm.com", "Berlin", "goalkiper"});
         return list.iterator();
-    }@DataProvider
-    public Iterator<Object[]> addNewContactFromCSV() throws IOException {
-        List<Object[]> list = new ArrayList<>();
-        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/UserDataContacts.csv")));
-        String line = reader.readLine();
-        while (line != null) {
-            String[] split = line.split(",");
-        list.add(new Object[]{new Contact().setName(split[0])
-                .setLastname(split[1])
-                .setPhone(split[2])
-                .setAddress(split[3])
-                .setCity(split[4])
-                .setDescription(split[5])});
-        line = reader.readLine();
-    }
-        return list.iterator();
     }
 
     @Test(dataProvider = "addNewContact")
@@ -65,6 +49,25 @@ public class AddContactTests extends TestBase {
                 .setDescription(des));
         app.getContact().clickWithAction(By.cssSelector(".add_form__2rsm2 button"));
     }
+
+    @DataProvider
+    public Iterator<Object[]> addNewContactFromCSV() throws IOException {
+        List<Object[]> list = new ArrayList<>();
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/UserDataContacts.csv")));
+        String line = reader.readLine();
+        while (line != null) {
+            String[] split = line.split(",");
+            list.add(new Object[]{new Contact().setName(split[0])
+                    .setLastname(split[1])
+                    .setPhone(split[2])
+                    .setAddress(split[3])
+                    .setCity(split[4])
+                    .setDescription(split[5])});
+            line = reader.readLine();
+        }
+        return list.iterator();
+    }
+
     @Test(dataProvider = "addNewContactFromCSV")
     public void addContactPositiveTestFromCSV(Contact contact) {
         app.getContact().click(By.xpath("//a[contains(test(),'ADD')]"));

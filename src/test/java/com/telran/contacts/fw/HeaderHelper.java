@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public class HeaderHelper extends HelperBase {
 
-
     public HeaderHelper(WebDriver driver) {
         super(driver);
     }
