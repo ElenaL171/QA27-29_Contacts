@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 public class RemoveContactTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
-        if (!app.isLoginLinkPresent()) {
-            app.clickOnSignOutButton();
+        if (!app.getHeader().isLoginLinkPresent()) {
+            app.getHeader().clickOnSignOutButton();
         } else {
             app.getUser().login();
             app.getContact().addContakt();

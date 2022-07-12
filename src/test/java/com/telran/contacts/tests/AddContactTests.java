@@ -17,7 +17,7 @@ public class AddContactTests extends TestBase {
     @BeforeMethod
     public void ensurePreconditions() {
         if (!app.getHeader().isLoginLinkPresent()) {
-            app.getUser().clickOnSignOutButton();
+            app.getHeader().clickOnSignOutButton();
         } else {
             app.getUser().login();
         }

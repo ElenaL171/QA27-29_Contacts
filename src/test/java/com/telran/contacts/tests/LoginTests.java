@@ -8,8 +8,8 @@ public class LoginTests extends TestBase {
     //precondition: user should be logged out
     @BeforeMethod
     public void ensurePrecondition() {
-        if (!app.isLoginLinkPresent()) {
-            app.clickOnSignOutButton();
+        if (!app.getHeader().isLoginLinkPresent()) {
+            app.getHeader().clickOnSignOutButton();
         }
     }
 
@@ -18,7 +18,7 @@ public class LoginTests extends TestBase {
         //click on Login link
         app.getUser().login();
         // accert the button SignOut
-        Assert.assertTrue(app.isSignOutButtonPresent());
+        Assert.assertTrue(app.getHeader().isSignOutButtonPresent());
     }
 
 }
