@@ -26,7 +26,7 @@ public class ContactHelper extends HelperBase {
         return false;
     }
 
-    public void addContakt() {
+    public void addContact() {
         int i = (int) (System.currentTimeMillis()) / 10000000;
         click(By.xpath("//a[contains(text(),'ADD')]"));
         fillContactForm(new Contact()

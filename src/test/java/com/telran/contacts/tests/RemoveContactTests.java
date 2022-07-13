@@ -11,7 +11,7 @@ public class RemoveContactTests extends TestBase {
             app.getHeader().clickOnSignOutButton();
         } else {
             app.getUser().login();
-            app.getContact().addContakt();
+            app.getContact().addContact();
         }
     }
 

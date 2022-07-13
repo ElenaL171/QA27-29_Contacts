@@ -25,7 +25,7 @@ public class AddContactTests extends TestBase {
 
     @Test
     public void addContactPositiveTest() {
-        app.getContact().addContakt();
+        app.getContact().addContact();
         Assert.assertTrue(app.getContact().isContactCreated("Karl"));
     }
 
@@ -40,7 +40,7 @@ public class AddContactTests extends TestBase {
 
     @Test(dataProvider = "addNewContact")
     public void addContactPositiveTestFromDataProvider(String name, String lName, String phone, String address, String city, String des) {
-        app.getContact().click(By.xpath("//a[contains(test(),'ADD')]"));
+        app.getContact().click(By.xpath("//a[contains(text(),'ADD')]"));
         app.getContact().fillContactForm(new Contact().setName(name)
                 .setLastname(lName)
                 .setPhone(phone)
@@ -70,7 +70,7 @@ public class AddContactTests extends TestBase {
 
     @Test(dataProvider = "addNewContactFromCSV")
     public void addContactPositiveTestFromCSV(Contact contact) {
-        app.getContact().click(By.xpath("//a[contains(test(),'ADD')]"));
+        app.getContact().click(By.xpath("//a[contains(text(),'ADD')]"));
         app.getContact().fillContactForm(contact);
         app.getContact().clickWithAction(By.cssSelector(".add_form__2rsm2 button"));
     }
