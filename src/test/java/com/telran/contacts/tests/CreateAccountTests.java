@@ -1,20 +1,15 @@
 package com.telran.contacts.tests;
 
-import com.telran.contacts.models.Contact;
 import com.telran.contacts.models.User;
+import com.telran.contacts.utils.DataProviders;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+
 
 public class CreateAccountTests extends TestBase {
-    //precondition: user should be logged out
     @BeforeMethod
     public void ensurePrecondition() {
         if (!app.getHeader().isLoginLinkPresent()) {
@@ -22,26 +17,25 @@ public class CreateAccountTests extends TestBase {
         }
     }
 
-    @Test
+    @Test(enabled = false)
     public void registrationPositiveTest() {
-        //click on the link LOGIN
         app.getUser().registration();
-        //assert the button Sign out displayed
         Assert.assertTrue(app.getHeader().isSignOutButtonPresent());
     }
 
-    @Test(dataProvider = "negativeRegistrationTestWithInvalidEmail")
+    @Test(dataProvider = "negativeRegistrationTestWithInvalidEmail", dataProviderClass = DataProviders.class)
     public void negativeRegistrationTestWithInvalidEmail(String email, String password) {
         app.getUser().click(By.xpath("//a[contains(text(),'LOGIN')]"));
-       // app.getUser().fillLoginRegistrationForm(user);
+        app.getUser().fillLoginRegistrationForm(new User().setEmail(email).setPassword(password));
         app.getUser().click(By.xpath("//button[contains(text(),'Registration')]"));
 
     }
-   @Test(dataProvider = "negativeRegistrationTestWithInvalidEmailFromCSV")
+   @Test(dataProvider = "negativeRegistrationTestWithInvalidEmailFromCSV", dataProviderClass = DataProviders.class)
     public void negativeRegistrationTestWithInvalidEmailFromCSV(User user) {
         app.getUser().click(By.xpath("//a[contains(text(),'LOGIN')]"));
         app.getUser().fillLoginRegistrationForm(user);
         app.getUser().click(By.xpath("//button[contains(text(),'Registration')]"));
+        Assert.assertTrue(app.getUser().isAlertPresent());
 
     }
 }

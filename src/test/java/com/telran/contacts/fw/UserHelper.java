@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class UserHelper extends HelperBase{
+
     public UserHelper(WebDriver driver) {
         super(driver);
     }
@@ -14,7 +15,7 @@ public class UserHelper extends HelperBase{
         click(By.xpath("//a[contains(.,'LOGIN')]"));
         Assert.assertTrue(isElementPresent(By.cssSelector(".login_login__3EHKB")));
         //fill registration form
-        fillLoginRegistrationForm(new User().setEmail("jesse1+983@mail.ru").setPassword("Jesse_12345"));
+        fillLoginRegistrationForm(new User().setEmail("jesse1+973@mail.ru").setPassword("Jesse_12345"));
         //click on the button Registration
         click(By.xpath("//button[contains(.,'Registration')]"));
     }
@@ -25,7 +26,10 @@ public class UserHelper extends HelperBase{
     }
     public void login() {
         click(By.xpath("//a[contains(.,'LOGIN')]"));
-        fillLoginRegistrationForm(new User().setEmail("jesse1+983@mail.ru").setPassword("Jesse_12345"));
+        fillLoginRegistrationForm(new User().setEmail("jesse1+973@mail.ru").setPassword("Jesse_12345"));
         click(By.xpath("//button[contains(.,'Login')]"));
+    }
+    public boolean istErrorPresent() {
+        return isElementPresent(By.xpath("//div[.='Login Failed with code 400']"));
     }
 }

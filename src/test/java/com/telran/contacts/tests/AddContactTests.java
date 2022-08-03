@@ -6,13 +6,8 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 public class AddContactTests extends TestBase {
     @BeforeMethod
@@ -42,7 +37,7 @@ public class AddContactTests extends TestBase {
         app.getContact().clickWithAction(By.cssSelector(".add_form__2rsm2 button"));
     }
 
-    @Test(dataProvider = "addNewContactFromCSV")
+    @Test(dataProvider = "addNewContactFromCSV", dataProviderClass = DataProviders.class)
     public void addContactPositiveTestFromCSV(Contact contact) {
         app.getContact().click(By.xpath("//a[contains(text(),'ADD')]"));
         app.getContact().fillContactForm(contact);

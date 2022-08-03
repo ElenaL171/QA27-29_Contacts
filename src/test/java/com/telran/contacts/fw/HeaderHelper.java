@@ -7,6 +7,7 @@ public class HeaderHelper extends HelperBase {
 
     public HeaderHelper(WebDriver driver) {
         super(driver);
+
     }
 
     public boolean isLoginLinkPresent() {
