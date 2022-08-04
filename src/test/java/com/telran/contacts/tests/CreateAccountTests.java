@@ -23,14 +23,14 @@ public class CreateAccountTests extends TestBase {
         Assert.assertTrue(app.getHeader().isSignOutButtonPresent());
     }
 
-    @Test(dataProvider = "negativeRegistrationTestWithInvalidEmail", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "negativeRegistrationTestWithInvalidEmail", dataProviderClass = DataProviders.class, enabled = false)
     public void negativeRegistrationTestWithInvalidEmail(String email, String password) {
         app.getUser().click(By.xpath("//a[contains(text(),'LOGIN')]"));
         app.getUser().fillLoginRegistrationForm(new User().setEmail(email).setPassword(password));
         app.getUser().click(By.xpath("//button[contains(text(),'Registration')]"));
 
     }
-   @Test(dataProvider = "negativeRegistrationTestWithInvalidEmailFromCSV", dataProviderClass = DataProviders.class)
+   @Test(dataProvider = "negativeRegistrationTestWithInvalidEmailFromCSV", dataProviderClass = DataProviders.class, enabled = false)
     public void negativeRegistrationTestWithInvalidEmailFromCSV(User user) {
         app.getUser().click(By.xpath("//a[contains(text(),'LOGIN')]"));
         app.getUser().fillLoginRegistrationForm(user);
