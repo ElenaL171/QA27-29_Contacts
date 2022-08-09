@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.contacts.tests.HomePageTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-02T09:25:06" hostname="DESKTOP-T9801DJ" time="0.046">
+  <properties/>
+  <testcase name="openHomePageTest" classname="com.telran.contacts.tests.HomePageTests" time="0.046"/>
+  <system-out><![CDATA[11:25:06.807 [Test worker] INFO  com.telran.contacts.tests.TestBase - Test startopenHomePageTest wiht data: []
+Site opened!
+11:25:06.854 [Test worker] INFO  com.telran.contacts.tests.TestBase - PASSED test method openHomePageTest
+]]></system-out>
+  <system-err><![CDATA[1659432302551	geckodriver	INFO	Listening on 127.0.0.1:48898
+1659432303035	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofileGqQ3uL"
+1659432303619	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofileGqQ3uL\\search.json.mozlz4", (void 0)))
+1659432306273	Marionette	INFO	Listening on port 61522
+Read port: 61522
+1659432306341	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Aug. 02, 2022 11:25:06 VORM. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1659432306872	Marionette	INFO	Stopped listening on port 61522
+[Parent 21228, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+]]></system-err>
+</testsuite>

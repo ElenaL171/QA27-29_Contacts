@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.contacts.tests.CreateAccountTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-08-02T09:24:11" hostname="DESKTOP-T9801DJ" time="49.632">
+  <properties/>
+  <testcase name="negativeRegistrationTestWithInvalidEmail[0](jesse1+983@mail.r, Jesse_12345)" classname="com.telran.contacts.tests.CreateAccountTests" time="2.092"/>
+  <testcase name="negativeRegistrationTestWithInvalidEmail[1](.com, Jesse_12345)" classname="com.telran.contacts.tests.CreateAccountTests" time="1.233"/>
+  <testcase name="negativeRegistrationTestWithInvalidEmail[2](jesse1+983mail.ru, Jesse_12345)" classname="com.telran.contacts.tests.CreateAccountTests" time="1.229"/>
+  <testcase name="negativeRegistrationTestWithInvalidEmailFromCSV[0](com.telran.contacts.models.User@462dcd38)" classname="com.telran.contacts.tests.CreateAccountTests" time="1.771"/>
+  <testcase name="negativeRegistrationTestWithInvalidEmailFromCSV[1](com.telran.contacts.models.User@395b0bb0)" classname="com.telran.contacts.tests.CreateAccountTests" time="2.307"/>
+  <testcase name="negativeRegistrationTestWithInvalidEmailFromCSV[2](com.telran.contacts.models.User@72679bd1)" classname="com.telran.contacts.tests.CreateAccountTests" time="1.745"/>
+  <testcase name="negativeRegistrationTestWithInvalidEmailFromCSV[3](com.telran.contacts.models.User@6bb6ed73)" classname="com.telran.contacts.tests.CreateAccountTests" time="1.829"/>
+  <system-out><![CDATA[11:24:11.243 [Test worker] INFO  com.telran.contacts.tests.TestBase - Test startnegativeRegistrationTestWithInvalidEmail wiht data: []
+11:24:13.477 [Test worker] INFO  com.telran.contacts.tests.TestBase - PASSED test method negativeRegistrationTestWithInvalidEmail
+11:24:20.819 [Test worker] INFO  com.telran.contacts.tests.TestBase - Test startnegativeRegistrationTestWithInvalidEmail wiht data: []
+11:24:22.083 [Test worker] INFO  com.telran.contacts.tests.TestBase - PASSED test method negativeRegistrationTestWithInvalidEmail
+11:24:28.703 [Test worker] INFO  com.telran.contacts.tests.TestBase - Test startnegativeRegistrationTestWithInvalidEmail wiht data: []
+11:24:29.968 [Test worker] INFO  com.telran.contacts.tests.TestBase - PASSED test method negativeRegistrationTestWithInvalidEmail
+11:24:36.218 [Test worker] INFO  com.telran.contacts.tests.TestBase - Test startnegativeRegistrationTestWithInvalidEmailFromCSV wiht data: []
+11:24:38.044 [Test worker] INFO  com.telran.contacts.tests.TestBase - PASSED test method negativeRegistrationTestWithInvalidEmailFromCSV
+11:24:44.277 [Test worker] INFO  com.telran.contacts.tests.TestBase - Test startnegativeRegistrationTestWithInvalidEmailFromCSV wiht data: []
+11:24:46.619 [Test worker] INFO  com.telran.contacts.tests.TestBase - PASSED test method negativeRegistrationTestWithInvalidEmailFromCSV
+11:24:52.004 [Test worker] INFO  com.telran.contacts.tests.TestBase - Test startnegativeRegistrationTestWithInvalidEmailFromCSV wiht data: []
+11:24:53.788 [Test worker] INFO  com.telran.contacts.tests.TestBase - PASSED test method negativeRegistrationTestWithInvalidEmailFromCSV
+11:24:59.151 [Test worker] INFO  com.telran.contacts.tests.TestBase - Test startnegativeRegistrationTestWithInvalidEmailFromCSV wiht data: []
+11:25:01.016 [Test worker] INFO  com.telran.contacts.tests.TestBase - PASSED test method negativeRegistrationTestWithInvalidEmailFromCSV
+]]></system-out>
+  <system-err><![CDATA[1659432246009	geckodriver	INFO	Listening on 127.0.0.1:17558
+1659432246497	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofileckeT81"
+1659432247106	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofileckeT81\\search.json.mozlz4", (void 0)))
+1659432250226	Marionette	INFO	Listening on port 60866
+Read port: 60866
+1659432250339	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Aug. 02, 2022 11:24:10 VORM. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1659432253495	Marionette	INFO	Stopped listening on port 60866
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+[Parent 27672, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1659432255571	geckodriver	INFO	Listening on 127.0.0.1:1423
+1659432256044	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofileKDs1es"
+1659432256754	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofileKDs1es\\search.json.mozlz4", (void 0)))
+1659432260200	Marionette	INFO	Listening on port 61022
+Read port: 61022
+1659432260308	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Aug. 02, 2022 11:24:20 VORM. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1659432262097	Marionette	INFO	Stopped listening on port 61022
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+[Parent 25752, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1659432263463	geckodriver	INFO	Listening on 127.0.0.1:40722
+1659432263940	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofileJzllpE"
+1659432264665	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofileJzllpE\\search.json.mozlz4", (void 0)))
+1659432267825	Marionette	INFO	Listening on port 61071
+Read port: 61071
+1659432267884	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Aug. 02, 2022 11:24:27 VORM. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1659432269980	Marionette	INFO	Stopped listening on port 61071
+[Parent 12468, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1659432271416	geckodriver	INFO	Listening on 127.0.0.1:21841
+1659432271881	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofilexzfuSl"
+1659432272640	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofilexzfuSl\\search.json.mozlz4", (void 0)))
+1659432275632	Marionette	INFO	Listening on port 61117
+Read port: 61117
+1659432275717	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Aug. 02, 2022 11:24:35 VORM. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1659432278053	Marionette	INFO	Stopped listening on port 61117
+1659432279495	geckodriver	INFO	Listening on 127.0.0.1:22426
+1659432279971	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofileFpZDxS"
+1659432280643	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofileFpZDxS\\search.json.mozlz4", (void 0)))
+1659432283691	Marionette	INFO	Listening on port 61169
+Read port: 61169
+1659432283801	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Aug. 02, 2022 11:24:43 VORM. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1659432286626	Marionette	INFO	Stopped listening on port 61169
+[Parent 19100, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1659432288004	geckodriver	INFO	Listening on 127.0.0.1:32189
+1659432288502	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofilevNYgGJ"
+1659432289075	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofilevNYgGJ\\search.json.mozlz4", (void 0)))
+1659432291505	Marionette	INFO	Listening on port 61406
+Read port: 61406
+1659432291586	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Aug. 02, 2022 11:24:51 VORM. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1659432293798	Marionette	INFO	Stopped listening on port 61406
+[Parent 19388, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1659432295017	geckodriver	INFO	Listening on 127.0.0.1:15581
+1659432295491	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofile7pXRhT"
+1659432296115	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Elena\\AppData\\Local\\Temp\\rust_mozprofile7pXRhT\\search.json.mozlz4", (void 0)))
+1659432298584	Marionette	INFO	Listening on port 61459
+Read port: 61459
+1659432298692	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Aug. 02, 2022 11:24:58 VORM. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1659432301030	Marionette	INFO	Stopped listening on port 61459
+]]></system-err>
+</testsuite>
